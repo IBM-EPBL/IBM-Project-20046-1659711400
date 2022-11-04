@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>IBM object Storage</title>
+   <link rel="stylesheet" href=   {{ url_for('static', filename='style.css') }}>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/santhosh-chintapatla/Flask-Gallery-Webapp@main/static/style.css">
+</head>
+<body>
+   
+<h1>IBM Object Storage</h1>
+<p>Through using ibm object storage maked ibm flask-gallery and the css was has used in this project is used extenal link</p>
 
+
+{% for row in files %}
+   <div class="box">
+      <h3>Filename : {{row}} </h3>
+      <img src="https://flask-gallery.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{row}}" width="150px"></td>
+   </div>
+{% endfor %}
+</body>
+</html>
